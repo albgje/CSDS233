@@ -5,18 +5,22 @@
  * It also has a method to get the current balance.
  */
 public class BankAccount {
+    // Instance variables
     private String accountNumber;
     private double balance;
 
+    // Constructor
     public BankAccount(String accountNumber, double balance) {
         this.accountNumber = accountNumber;
         this.balance = balance;
     }
 
+    // Deposit money into the account
     public void deposit(double amount) {
         balance += amount;
     }
 
+    // Withdraw money from the account
     public void withdraw(double amount) {
         balance -= amount;
         if (balance < 0) {
@@ -24,6 +28,7 @@ public class BankAccount {
         }
     }
 
+    // Get the current balance
     public double getBalance() {
         return balance;
     }
