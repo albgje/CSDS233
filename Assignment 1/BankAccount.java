@@ -22,9 +22,10 @@ public class BankAccount {
 
     // Withdraw money from the account
     public void withdraw(double amount) {
-        balance -= amount;
-        if (balance < 0) {
-            balance = 0;
+        if (balance - amount < 0) {
+            System.out.println("Insufficient funds");
+        } else {
+            balance -= amount;
         }
     }
 
