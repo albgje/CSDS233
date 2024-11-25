@@ -22,6 +22,8 @@ public class SortingMethods {
         System.out.println();
         System.out.println("Bucket Sort");
         sorting.bucketSort(array4);
+
+        // For this array, it seems like either quick sort or bucket sort is the best based on the number of comparisons, but any work because of how small the array is.
     }
 
     public void printArray(int[] array) {
