@@ -1,0 +1,161 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=10448, tid=0x0000000000001954
+#
+# JRE version:  (8.0_422-b05) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.422-b05 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001ed2760b800):  JavaThread "Unknown thread" [_thread_in_vm, id=6484, stack(0x00000006f2a00000,0x00000006f2b00000)]
+
+Stack: [0x00000006f2a00000,0x00000006f2b00000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000001ed2760b800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=6484, stack(0x00000006f2a00000,0x00000006f2b00000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000081600000, size: 2026 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5d00000, 0x00000000d8780000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5d00000,0x00000000d5da6670,0x00000000d7d80000)
+  from space 5120K, 0% used [0x00000000d8280000,0x00000000d8280000,0x00000000d8780000)
+  to   space 5120K, 0% used [0x00000000d7d80000,0x00000000d7d80000,0x00000000d8280000)
+ ParOldGen       total 87552K, used 0K [0x0000000081600000, 0x0000000086b80000, 0x00000000d5d00000)
+  object space 87552K, 0% used [0x0000000081600000,0x0000000081600000,0x0000000086b80000)
+ Metaspace       used 779K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x000001ed38340000,0x000001ed38740000] byte_map_base: 0x000001ed37f35000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000070cd18f0
+ Begin Bits: [0x000001ed389f0000, 0x000001ed3a998000)
+ End Bits:   [0x000001ed3a998000, 0x000001ed3c940000)
+
+Polling page: 0x000001ed276d0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x000001ed28f80000, 0x000001ed291f0000, 0x000001ed37f80000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.027 loading class java/lang/Short
+Event: 0.028 loading class java/lang/Short done
+Event: 0.028 loading class java/lang/Integer
+Event: 0.028 loading class java/lang/Integer done
+Event: 0.028 loading class java/lang/Long
+Event: 0.028 loading class java/lang/Long done
+Event: 0.029 loading class java/lang/NullPointerException
+Event: 0.029 loading class java/lang/NullPointerException done
+Event: 0.029 loading class java/lang/ArithmeticException
+Event: 0.029 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff7c7f50000 - 0x00007ff7c7fa1000 	C:\Users\asher\AppData\Local\Programs\Eclipse Adoptium\jdk-8.0.422.5-hotspot\bin\java.exe
+0x00007ffe8c7d0000 - 0x00007ffe8c9c8000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe8b210000 - 0x00007ffe8b2d2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe89ea0000 - 0x00007ffe8a19e000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe8c4c0000 - 0x00007ffe8c571000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe8bc30000 - 0x00007ffe8bcce000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe8b170000 - 0x00007ffe8b20f000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe8c600000 - 0x00007ffe8c723000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe8a350000 - 0x00007ffe8a377000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffe8b5b0000 - 0x00007ffe8b74d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe89e70000 - 0x00007ffe89e92000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe8c350000 - 0x00007ffe8c37b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe8a6d0000 - 0x00007ffe8a7e7000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe8a380000 - 0x00007ffe8a41d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe8a420000 - 0x00007ffe8a520000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe69b90000 - 0x00007ffe69e2a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16\COMCTL32.dll
+0x00007ffe8c320000 - 0x00007ffe8c34f000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffe82000000 - 0x00007ffe82015000 	C:\Users\asher\AppData\Local\Programs\Eclipse Adoptium\jdk-8.0.422.5-hotspot\jre\bin\vcruntime140.dll
+0x00007ffe7bef0000 - 0x00007ffe7bf8b000 	C:\Users\asher\AppData\Local\Programs\Eclipse Adoptium\jdk-8.0.422.5-hotspot\jre\bin\msvcp140.dll
+0x00000000704f0000 - 0x0000000070d4a000 	C:\Users\asher\AppData\Local\Programs\Eclipse Adoptium\jdk-8.0.422.5-hotspot\jre\bin\server\jvm.dll
+0x00007ffe8b0e0000 - 0x00007ffe8b0e8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe72320000 - 0x00007ffe72329000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe7dc80000 - 0x00007ffe7dc8a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe73e40000 - 0x00007ffe73e67000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe8bbc0000 - 0x00007ffe8bc2b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe88660000 - 0x00007ffe88672000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffe828f0000 - 0x00007ffe82900000 	C:\Users\asher\AppData\Local\Programs\Eclipse Adoptium\jdk-8.0.422.5-hotspot\jre\bin\verify.dll
+0x00007ffe7bec0000 - 0x00007ffe7beeb000 	C:\Users\asher\AppData\Local\Programs\Eclipse Adoptium\jdk-8.0.422.5-hotspot\jre\bin\java.dll
+0x00007ffe7bea0000 - 0x00007ffe7beb8000 	C:\Users\asher\AppData\Local\Programs\Eclipse Adoptium\jdk-8.0.422.5-hotspot\jre\bin\zip.dll
+
+VM Arguments:
+java_command: SortingMethods
+java_class_path (initial): C:\Users\asher\AppData\Roaming\Code\User\workspaceStorage\f2fe6b8f2dfb1372ca09c69c4d0f5be1\redhat.java\jdt_ws\CSDS233_7da922a8\bin
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+USERNAME=asher
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.5072)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8298376k(581696k free), swap 16686984k(5160k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.422-b05) for windows-amd64 JRE (1.8.0_422-b05), built on Jul 18 2024 13:37:58 by "jenkins" with MS VC++ 15.9 (VS2017)
+
+time: Sun Nov 24 23:04:23 2024
+timezone: Eastern Standard Time
+elapsed time: 0.069281 seconds (0d 0h 0m 0s)
+
